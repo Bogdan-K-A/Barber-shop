@@ -1,0 +1,15 @@
+/* font-family: 'Catamaran', sans-serif; */
+:root {
+	--primary-text-color: #163561;
+	--secondary-text-color: #153461;
+	--primary-white-color: #ffffff;
+	--title-color: #fbb400;
+	--accent-color: #99baed;
+	--secondary-bg-color: #e5ecfe;
+}
+
+body {
+	font-family: "Catamaran", sans-serif;
+}
+.container {
+}
