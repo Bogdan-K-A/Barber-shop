@@ -25,15 +25,19 @@ body {
 }
 .header {
 	padding-left: auto;
-	padding-right: auto; 170 210
+	padding-right: auto;
 }
 
 .logo {
 	margin-right: 110px;
+	margin-left: 170px;
 }
 .nav-list a {
 	padding: 64px 14px 8px;
 }
 .nav-list li:not(:last-child) {
 	margin-right: 20px;
+}
+.btn {
+	margin-right: 210px;
 }
