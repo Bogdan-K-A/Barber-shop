@@ -12,4 +12,8 @@ body {
 	font-family: "Catamaran", sans-serif;
 }
 .container {
+	width: 1920px;
+	margin: 0 auto;
+
+	outline: 1px solid tomato;
 }
