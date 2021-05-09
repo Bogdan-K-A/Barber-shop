@@ -10,10 +10,30 @@
 
 body {
 	font-family: "Catamaran", sans-serif;
+	background-color: var(--primary-white-color);
 }
 .container {
 	width: 1920px;
 	margin: 0 auto;
 
 	outline: 1px solid tomato;
+}
+.nav-list,
+.btn-box,
+.header {
+	display: flex;
+}
+.header {
+	padding-left: auto;
+	padding-right: auto; 170 210
+}
+
+.logo {
+	margin-right: 110px;
+}
+.nav-list a {
+	padding: 64px 14px 8px;
+}
+.nav-list li:not(:last-child) {
+	margin-right: 20px;
 }
