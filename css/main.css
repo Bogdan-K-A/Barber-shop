@@ -24,8 +24,8 @@ body {
 	display: flex;
 }
 .header {
-	padding-left: auto;
-	padding-right: auto;
+	justify-content: center;
+	align-items: center;
 }
 
 .logo {
@@ -38,6 +38,33 @@ body {
 .nav-list li:not(:last-child) {
 	margin-right: 20px;
 }
-.btn {
+.nav-item {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 1.32;
+}
+.btn-userpic {
+	border: none;
+	background-color: transparent;
+}
+.btn-all {
 	margin-right: 210px;
+	padding: 23px 32px;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.5;
+	letter-spacing: 0.03em;
+
+	color: var(--primary-white-color);
+	background-color: var(--accent-color);
+	border-radius: 20px;
+	border: none;
+}
+.btn-all:hover,
+.btn-all:focus {
+	background-color: rgba(153, 186, 237, 0.5);
+	/* filter: blur(50px); */
+	border-radius: 20px;
 }
