@@ -1,7 +1,9 @@
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
 /* ===== ДОПОЛНЕНИЯ от Sandra Hrevtsova ===== */
-
+img {
+	display: block;
+}
 /* обнуляем дефолтные маркеры у всех маркированных списков */
 ul {
 	list-style: none;

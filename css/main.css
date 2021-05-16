@@ -14,6 +14,7 @@ body {
 }
 button {
 	cursor: pointer;
+	font-family: inherit;
 }
 
 .container {
@@ -22,6 +23,8 @@ button {
 
 	outline: 1px solid tomato;
 }
+
+/* ======================header==================== */
 .nav-list,
 .btn-box,
 .header {
@@ -82,4 +85,98 @@ button {
 	/* padding: 26px 35px; */
 	box-shadow: 0 10px 30px var(--accent-color);
 	transition: all 0.2s ease-out;
+}
+/* =============================header and======================== */
+
+/* ===========================section hero====================== */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.section.hero {
+	padding: 32px 0 136px;
+}
+.item-set .item:not(:last-child) {
+	padding-bottom: 226px;
+}
+
+.item-set .item {
+	display: flex;
+}
+
+.item-set .item:nth-child(-n + 1) {
+	flex-direction: row-reverse;
+}
+.item-set .item:nth-child(-n + 1) .content {
+	margin-right: 24px;
+}
+
+.item-set .item:nth-child(2n) .content {
+	margin-left: 149px;
+}
+.item-set .section-title.top-title {
+	width: 576px;
+	height: 300px;
+	margin-bottom: 29px;
+
+	font-weight: 700;
+	font-size: 75px;
+	line-height: 1.333;
+}
+
+.section-title span,
+.headline span {
+	color: var(--title-color);
+}
+
+.section-title.headline,
+.headline-gallery {
+	font-weight: bold;
+	font-size: 70px;
+	line-height: 1.506;
+	letter-spacing: 0.03em;
+}
+
+.section-title.headline {
+	margin-bottom: 82px;
+}
+
+.headline-gallery {
+	margin-bottom: 110px;
+}
+
+.text {
+	font-size: 25px;
+	line-height: 1.52;
+	letter-spacing: 0.03em;
+	color: var(--secondary-text-color);
+}
+
+.desc-set li:not(:last-child) {
+	margin-bottom: 48px;
+}
+.desc-set li:not(:first-child) {
+	margin-bottom: 108px;
+}
+
+.item-set .text {
+	width: 526px;
+}
+
+.item-set .quote {
+	margin-bottom: 97px;
+}
+
+.item-set .btn-all {
+	padding: 23px 41px 22px;
 }
