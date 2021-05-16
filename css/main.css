@@ -12,6 +12,10 @@ body {
 	font-family: "Catamaran", sans-serif;
 	background-color: var(--primary-white-color);
 }
+button {
+	cursor: pointer;
+}
+
 .container {
 	width: 1920px;
 	margin: 0 auto;
@@ -22,9 +26,6 @@ body {
 .btn-box,
 .header {
 	display: flex;
-}
-.header {
-	justify-content: center;
 	align-items: center;
 }
 
@@ -32,18 +33,24 @@ body {
 	margin-right: 110px;
 	margin-left: 170px;
 }
-.nav-list a {
+.nav-list .nav-item {
 	padding: 64px 14px 8px;
-}
-.nav-list li:not(:last-child) {
-	margin-right: 20px;
-}
-.nav-item {
+
 	font-style: normal;
 	font-weight: 500;
 	font-size: 25px;
 	line-height: 1.32;
 }
+.nav-list .nav-item:not(:last-child) {
+	margin-right: 20px;
+}
+.nav-item:hover {
+	color: var(--primary-white-color);
+	background-color: #a3c1ef;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
 .btn-userpic {
 	border: none;
 	background-color: transparent;
@@ -62,9 +69,17 @@ body {
 	border-radius: 20px;
 	border: none;
 }
+.btn-box .btn-item:not(:last-child) {
+	margin-right: 72px;
+}
+
+.container-btn {
+	margin-left: auto;
+}
+
 .btn-all:hover,
 .btn-all:focus {
-	background-color: rgba(153, 186, 237, 0.5);
-	/* filter: blur(50px); */
-	border-radius: 20px;
+	/* padding: 26px 35px; */
+	box-shadow: 0 10px 30px var(--accent-color);
+	transition: all 0.2s ease-out;
 }
