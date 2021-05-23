@@ -93,42 +93,14 @@ button {
 
 /* ---------------------------------- Hero ---------------------------------- */
 
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
 .section.hero {
 	padding: 32px 0 68px;
 }
-.item-set .item:not(:last-child) {
-	padding-bottom: 226px;
-}
-
-.item-set .item {
+.hero-box {
 	display: flex;
 }
 
-.item-set .item:nth-child(-n + 1) {
-	flex-direction: row-reverse;
-}
-.item-set .item:nth-child(-n + 1) .content {
-	margin-right: 24px;
-}
-
-.item-set .item:nth-child(2n) .content {
-	margin-left: 149px;
-}
-.item-set .section-title.top-title {
+.section-title.top-title {
 	width: 576px;
 	height: 300px;
 	margin-bottom: 29px;
@@ -144,14 +116,40 @@ button {
 }
 
 .section-title.headline,
-.headline-gallery {
+.headline-galleri {
 	font-weight: bold;
 	font-size: 70px;
 	line-height: 1.506;
 	letter-spacing: 0.03em;
 }
 
+.content-hero {
+	background-image: url(../img/section/hero-img.svg);
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	padding: 165px 1156px 138px 188px;
+}
+
+.text.quote {
+	width: 526px;
+	margin-bottom: 97px;
+}
+
 /* -------------------------------- Hero and -------------------------------- */
+
+/* --------------------------------- history -------------------------------- */
+.history-box {
+	background: url(../img/section/bg-top-left.svg) left top,
+		url(../img/section/bg-top-right.svg) right top,
+		url(../img/section/histori-img.svg) left center;
+
+	background-repeat: no-repeat;
+	background-position-x: -1%, 100%, 70px;
+	background-position-y: -10%, -10%, 50%;
+
+	padding: 288px 195px 334px 1199px;
+}
+/* --------------------------------- history  and-------------------------------- */
 
 /* --------------------------------- Услуги --------------------------------- */
 
@@ -214,18 +212,33 @@ button {
 	color: var(--primary-white-color);
 	border-radius: 29px;
 	box-shadow: 0 10px 30px var(--accent-color);
-	transition: all 0.5s ease-out;
+	transition: all 250ms ease-out;
 }
 .card:hover .text {
 	color: var(--primary-white-color);
-	transition: all 0.5s ease-out;
+	transition: all 250ms ease-out;
 }
 
+.bg-services {
+	background: url(../img/section/bg-batton-left.svg) left,
+		url(../img/section/bg-batton-right.svg) right;
+
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+}
 /* ------------------------------- Услуги and ------------------------------- */
 
 /* --------------------------------- Галерея -------------------------------- */
-.headline-gallery {
-	margin-bottom: 110px;
+.headline-galleri {
+	height: 82px;
+	margin: 0 auto 110px;
+	text-align: center;
+}
+
+.galleri-container {
+	max-width: 1379px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .text {
@@ -242,21 +255,14 @@ button {
 	margin-bottom: 108px;
 }
 
-.item-set .text {
-	width: 526px;
-}
-
-.item-set .quote {
-	margin-bottom: 97px;
-}
-
 .item-set .btn-all {
 	padding: 23px 41px 22px;
 }
 
-.galleri-container {
+.galleri-list {
 	display: flex;
 	flex-wrap: wrap;
+
 	margin-left: calc(-1 * 37px);
 	margin-top: calc(-1 * 37px);
 }
