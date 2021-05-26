@@ -13,10 +13,11 @@
 </head>
 
 <body>
-    <!-- HEADER ================================================================== -->
+
+    <!-- ------------------------------- Header -------------------------------- -->
     <header class="header">
         <div class="container">
-            <img class="logo" src="./img/logo.svg" alt="" width="163">
+            <img class="logo" src="./img/header/logo.svg" alt="" width="163">
             <nav>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="">Home</a></li>
@@ -25,18 +26,17 @@
                     <li class="nav-item"><a href="">Gallary</a></li>
                 </ul>
             </nav>
-            <div class="container-btn">
-                <ul class="btn-box">
-                    <il class="btn-item">
+            <div class="btn-container">
+                <ul class="btn-list">
+                    <li class="btn-item">
                         <button class="btn-userpic" type="button">
                             <img src="./img/header/Profile.svg" alt="">
                         </button>
-                    </il>
-                    <il class="btn-item">
+                    </li>
+                    <li class="btn-item">
                         <button class="btn-userpic" type="button">
                             <img src="./img/header/Notification.svg" alt="">
                         </button>
-                    </il>
                     <li class="btn-item">
                         <button class="btn-all" type="button">Appointment</button>
                     </li>
@@ -46,62 +46,44 @@
         </div>
     </header>
 
-    <!-- MAIN ==================================================================== -->
+    <!-- -------------------------------- Main --------------------------------- -->
+    <!-- -------------------------------- Hero --------------------------------- -->
     <main>
-        <section class="section hero">
+        <section class="hero">
             <div class="container">
-                <div class="content-hero">
-                    <h1 class="section-title"><span>Hairstyle</span> Reflects The Personality Inside
-                        You
-                    </h1>
-                    <p class="text quote">It is a long established fact that a reader will be distracted by
-                        the
-                        readable
-                        content of a
-                        page
-                        w
-                        hen looking at.</p>
-                    <batton class="btn-all" type="button">Get Started</batton>
-                </div>
+                <h1 class="section-title"><span>Hairstyle</span> Reflects The Personality Inside You</h1>
+                <p class="text">It is a long established fact that a reader will be distracted by
+                    the readable content of a page when looking at.</p>
+                <button class="btn-all" type="button">Get Started</button>
             </div>
         </section>
-        <section class="section">
-            <div class="container history-box">
+        <section class="history">
+            <div class="container">
                 <h2 class="section-title">Our <span>History</span></h2>
                 <ul class="desc-set">
                     <li>
-                        <p class="text">It is a long established fact that a reader will be distracted
-                            by the
-                            readable
-                            content of
-                            a
-                            page w
-                            hen looking at.</p>
+                        <p class="text">It is a long established fact that a reader will be distracted by
+                            the readable content of a page when looking at.</p>
                     </li>
                     <li>
-                        <p class="text">It is a long established fact that a reader will be distracted
-                            by the
-                            readable
-                            content of
-                            a
-                            page w
-                            hen looking at.</p>
+                        <p class="text">It is a long established fact that a reader will be distracted by
+                            the readable content of a page when looking at.</p>
                     </li>
                 </ul>
-                <batton class="btn-all" type="button">Learn more</batton>
+                <button class="btn-all" type="button">Learn more</button>
             </div>
         </section>
 
-        <!-- ------------------------------- Услуги -------------------------------- -->
-
-        <section class="section services">
+        <!-- ------------------------------- Services -------------------------------- -->
+        <section class="services">
             <div class="container">
                 <h2 class="section-title">Services We <span>Provide</span></h2>
-
                 <ul class="aside-container">
                     <li class="card">
                         <div class="img-box">
-                            <img src="./img/section/services/hair.svg" alt="" width="80px" height="80px">
+                            <svg width="80px" height="80px">
+                                <use href="./img/icons/sprite.svg#hair"></use>
+                            </svg>
                         </div>
                         <div class="aside-content-box">
                             <h3>Hair Cut</h3>
@@ -111,7 +93,9 @@
                     </li>
                     <li class="card">
                         <div class="img-box">
-                            <img src="./img/section/services/electric.svg" alt="" width="100px" height="100px">
+                            <svg width="100px" height="100px">
+                                <use href="./img/icons/sprite.svg#electric"></use>
+                            </svg>
                         </div>
                         <div class="aside-content-box">
                             <h3>Beard Cut</h3>
@@ -121,7 +105,9 @@
                     </li>
                     <li class="card">
                         <div class="img-box">
-                            <img src="./img/section/services/cleanser.svg" alt="" width="66px" height="66px">
+                            <svg width="66px" height="66px">
+                                <use href="./img/icons/sprite.svg#cleanser"></use>
+                            </svg>
                         </div>
                         <div class="aside-content-box">
                             <h3>Facial Pack</h3>
@@ -133,47 +119,76 @@
             </div>
         </section>
 
-        <!-- ------------------------------ Галлерея ------------------------------- -->
-        <section>
+        <!-- ------------------------------ Galleri ------------------------------- -->
+        <section class="galleri">
             <div class="container">
-                <div class="galleri-container">
-                    <h2 class="section-title">Our <span>Gallery</span></h2>
-                    <ul class="galleri-list">
-                        <li><img src="./img/galiri-img/img-1.jpg" alt="" width="435"></li>
-                        <li><img src="./img/galiri-img/img-2.jpg" alt="" width="435"></il>
-                        <li><img src="./img/galiri-img/img-3.jpg" alt="" width="435"></il>
-                        <li><img src="./img/galiri-img/img-4.jpg" alt="" width="435"></il>
-                        <li><img src="./img/galiri-img/img-5.jpg" alt="" width="435"></il>
-                        <li><img src="./img/galiri-img/img-6.jpg" alt="" width="435"></il>
-                    </ul>
-                </div>
-
+                <h2 class="section-title">Our <span>Gallery</span></h2>
+                <ul class="galleri-list">
+                    <li>
+                        <div class="overlay"></div>
+                        <img src="./img/galiri-img/img-1.jpg" alt="" width="435">
+                    </li>
+                    <li>
+                        <div class="overlay"></div>
+                        <img src="./img/galiri-img/img-2.jpg" alt="" width="435">
+                    </li>
+                    <li>
+                        <div class="overlay"></div>
+                        <img src="./img/galiri-img/img-3.jpg" alt="" width="435">
+                    </li>
+                    <li>
+                        <div class="overlay"></div>
+                        <img src="./img/galiri-img/img-4.jpg" alt="" width="435">
+                    </li>
+                    <li>
+                        <div class="overlay"></div>
+                        <img src="./img/galiri-img/img-5.jpg" alt="" width="435">
+                    </li>
+                    <li>
+                        <div class="overlay"></div>
+                        <img src="./img/galiri-img/img-6.jpg" alt="" width="435">
+                    </li>
+                </ul>
                 <button class="btn-all" type="button">View All</button>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER ==================================================================== -->
-    <footer>
+    <!-- ------------------------------- Footer -------------------------------- -->
+    <footer class="footer">
         <div class="container">
-            <img src="./img/logo.svg" alt="" width="236">
-            <ul>
+            <a class="footer-logo" href="">
+                <svg width="240px" height="160px">
+                    <use href="./img/icons/sprite.svg#logo"></use>
+                </svg>
+            </a>
+            <p class="text">It is a long established fact that a reader will be distracted by the readable</p>
+            <ul class="social-set">
                 <li>
-                    <p class="text">It is a long established fact that a reader will be distracted by the readable</p>
+                    <a href="">
+                        <svg width="19px" height="38px">
+                            <use href="./img/icons/sprite.svg#ficebook"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li>
-                    <ul>
-                        <li>
-                            <a href=""><img src="./img/social/ficebook.svg" alt=""></a>
-                        </li>
-                        <li><a href=""><img src="./img/social/twitter.svg" alt=""></a></li>
-                        <li><a href=""><img src="./img/social/google.svg" alt=""></a></li>
-                    </ul>
+                    <a href="">
+                        <svg width="32px" height="26px">
+                            <use href="./img/icons/sprite.svg#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <svg width="28px" height="29px">
+                            <use href="./img/icons/sprite.svg#google"></use>
+                        </svg>
+                    </a>
                 </li>
             </ul>
+            <div class="line"></div>
         </div>
     </footer>
-
 </body>
 
 </html>

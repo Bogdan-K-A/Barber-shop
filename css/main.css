@@ -4,8 +4,10 @@
 	--secondary-text-color: #153461;
 	--primary-white-color: #ffffff;
 	--title-color: #fbb400;
-	--accent-color: #99baed;
+	--accent-color: #a3c1ef;
 	--secondary-bg-color: #e5ecfe;
+	--shadow-color: #d5e5ff;
+	--social-color: #d3e5ff;
 }
 
 body {
@@ -18,6 +20,7 @@ body {
 	line-height: 1.52;
 	letter-spacing: 0.03em;
 }
+
 button {
 	cursor: pointer;
 	font-family: inherit;
@@ -27,43 +30,56 @@ button {
 	width: 1920px;
 	margin: 0 auto;
 
-	outline: 1px solid tomato;
+	/* outline: 1px solid tomato; */
 }
 
-/* ======================header==================== */
+/* --------------------------------- Header --------------------------------- */
 .nav-list,
-.btn-box,
+.btn-list,
 .header .container {
 	display: flex;
 	align-items: center;
+}
+
+.header .container {
+	padding-bottom: 49px;
 }
 
 .logo {
 	margin-right: 110px;
 	margin-left: 170px;
 }
+
 .nav-list .nav-item {
 	padding: 64px 14px 8px;
 
 	font-weight: 500;
 	line-height: 1.32;
 }
+
 .nav-list .nav-item:not(:last-child) {
 	margin-right: 20px;
 }
+
 .nav-item:hover {
 	color: var(--primary-white-color);
-	background-color: #a3c1ef;
+	background-color: var(--accent-color);
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+
+	transition: all 250ms ease-out;
 }
 
 .btn-userpic {
 	border: none;
 	background-color: transparent;
 }
-.btn-all {
+
+.header .btn-all {
 	margin-right: 210px;
+}
+
+.btn-all {
 	padding: 23px 32px;
 
 	font-weight: 700;
@@ -76,30 +92,24 @@ button {
 	border-radius: 20px;
 	border: none;
 }
-.btn-box .btn-item:not(:last-child) {
+
+.btn-list .btn-item:not(:last-child) {
 	margin-right: 72px;
 }
 
-.container-btn {
+.btn-container {
 	margin-left: auto;
 }
 
 .btn-all:hover,
 .btn-all:focus {
-	/* padding: 26px 35px; */
-	box-shadow: 0 10px 30px var(--accent-color);
-	transition: all 0.2s ease-out;
+	box-shadow: 0 10px 30px var(--shadow-color);
+	transition: all 250ms ease-out;
 }
-/* =============================header and======================== */
+/* ------------------------------- Header and ------------------------------- */
 
-/* ===========================section====================== */
-
+/* --------------------------------- Main -------------------------------- */
 /* ---------------------------------- Hero ---------------------------------- */
-
-.hero {
-	padding: 32px 0 68px;
-}
-
 .hero .section-title {
 	margin-bottom: 29px;
 }
@@ -111,30 +121,29 @@ button {
 .section-title {
 	font-weight: 700;
 	font-size: 70px;
-	line-height: 1.506;
+	line-height: 1.5;
 	letter-spacing: 0.03em;
 }
 
-.content-hero {
+.hero .container {
 	background-image: url(../img/section/hero-img.svg);
 	background-repeat: no-repeat;
 	background-position-x: 100%;
-	padding: 165px 1156px 138px 188px;
+	padding: 80px 1156px 153px 188px;
 }
 
-.text.quote {
-	width: 526px;
-	margin-bottom: 97px;
+.hero .text,
+.desc-set li:not(:first-child) {
+	margin-bottom: 90px;
 }
-
 /* -------------------------------- Hero and -------------------------------- */
 
-/* --------------------------------- history -------------------------------- */
-.history-box .section-title {
+/* --------------------------------- History -------------------------------- */
+.history .section-title {
 	margin-bottom: 80px;
 }
 
-.history-box {
+.history .container {
 	background: url(../img/section/bg-top-left.svg) left top,
 		url(../img/section/bg-top-right.svg) right top,
 		url(../img/section/histori-img.svg) left center;
@@ -144,14 +153,31 @@ button {
 
 	padding: 288px 195px 216px 1199px;
 }
-/* --------------------------------- history  and-------------------------------- */
 
-/* --------------------------------- Provid --------------------------------- */
-.section-title.headline {
-	width: 389px;
-	height: 164px;
-	margin: 0 auto 83px;
+.desc-set li:not(:last-child) {
+	margin-bottom: 48px;
+}
+
+.item-set .btn-all {
+	padding: 23px 41px;
+}
+/* --------------------------------- History  and-------------------------------- */
+
+/* --------------------------------- Services --------------------------------- */
+.services .container {
 	text-align: center;
+	padding: 131px 0 250px;
+
+	background: url(../img/section/bg-batton-left.svg) left,
+		url(../img/section/bg-batton-right.svg) right;
+
+	background-repeat: no-repeat;
+	background-position: -1% 115%, 100% 115%;
+}
+
+.services .section-title {
+	width: 390px;
+	margin: 0 auto 80px;
 }
 
 .aside-container {
@@ -181,16 +207,18 @@ button {
 	width: 103px;
 	height: 126px;
 
-	background-color: #e5ecfe;
+	background-color: var(--secondary-bg-color);
 	box-shadow: 0px 1px 0px #008fdd;
 	border-radius: 13px;
 }
+
 .aside-content-box {
 	padding: 60px 41px;
 }
+
 .aside-content-box h3 {
 	margin-bottom: 60px;
-	font-weight: bold;
+	font-weight: 700;
 	font-size: 45px;
 	line-height: 1.166;
 
@@ -202,66 +230,123 @@ button {
 	background: var(--accent-color);
 	color: var(--primary-white-color);
 	border-radius: 29px;
-	box-shadow: 0 10px 30px var(--accent-color);
+	box-shadow: 20px 30px 50px var(--shadow-color);
 	transition: all 250ms ease-out;
 }
+
 .card:hover .text {
 	color: var(--primary-white-color);
 	transition: all 250ms ease-out;
 }
+/* ------------------------------- Services and ------------------------------- */
 
-.services .container {
+/* --------------------------------- Galleri -------------------------------- */
+.galleri .container {
+	padding: 30px 270px 90px;
 	text-align: center;
-	background: url(../img/section/bg-batton-left.svg) left,
-		url(../img/section/bg-batton-right.svg) right;
+
+	background: url(../img/section/bg-top-left.svg),
+		url(../img/section/bg-top-right.svg);
 
 	background-repeat: no-repeat;
-	background-position-x: -1%, 100%, 70px;
-	background-position-y: -10%, -10%, 50%;
-}
-/* ------------------------------- Услуги and ------------------------------- */
-
-/* --------------------------------- Галерея -------------------------------- */
-.headline-galleri {
-	height: 82px;
-	margin: 0 auto 110px;
-	text-align: center;
+	background-position: 0% -9%, 100% -9%;
 }
 
-.galleri-container {
-	max-width: 1379px;
-	margin-left: auto;
-	margin-right: auto;
+.galleri .section-title {
+	margin: 0 0 110px;
 }
 
-.text {
-	font-size: 25px;
-	line-height: 1.52;
-	letter-spacing: 0.03em;
-	color: var(--secondary-text-color);
-}
-
-.desc-set li:not(:last-child) {
-	margin-bottom: 48px;
-}
-.desc-set li:not(:first-child) {
-	margin-bottom: 108px;
-}
-
-.item-set .btn-all {
-	padding: 23px 41px 22px;
+.galleri .btn-all {
+	padding: 23px 56px;
 }
 
 .galleri-list {
 	display: flex;
 	flex-wrap: wrap;
+	margin-bottom: 75px;
 
-	margin-left: calc(-1 * 37px);
 	margin-top: calc(-1 * 37px);
+	margin-left: calc(-1 * 37px);
 }
 
 .galleri-list li {
-	margin-left: 37px;
-	margin-top: 37px;
-	flex-basis: calc(100% * 111px / 3 - 37px);
+	position: relative;
+	margin: 37px 0 0 37px;
+	flex-basis: calc((100% - 111px) / 3);
+}
+
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	opacity: 1;
+	background: rgba(82, 150, 255, 0.35);
+	transition: opacity 500ms ease-out;
+}
+
+.overlay:hover {
+	opacity: 0;
+}
+/* --------------------------------- Galleri and-------------------------------- */
+/* -------------------------------- Main and -------------------------------- */
+
+/* ---------------------------------- Footer --------------------------------- */
+.footer .container {
+	text-align: center;
+	padding: 90px 270px 100px;
+
+	background: url(../img/section/bg-batton-left.svg),
+		url(../img/section/bg-batton-right.svg);
+
+	background-repeat: no-repeat;
+	background-position: -1% -120%, 101% -195%;
+}
+
+.footer-logo {
+	display: block;
+	margin-bottom: 35px;
+}
+
+.footer .text {
+	width: 526px;
+	margin: 0 auto 47px;
+}
+
+.line {
+	width: 1362px;
+
+	border: 1px solid var(--accent-color);
+}
+.social-set {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-bottom: 47px;
+}
+.social-set li:not(:last-child) {
+	margin-right: 25px;
+}
+
+.social-set li {
+	width: 67px;
+	height: 67px;
+	border-radius: 50%;
+}
+.social-set a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 67px;
+	height: 67px;
+	border-radius: 50%;
+
+	background: var(--social-color);
+	transition: background-color 250ms ease-out;
+}
+
+.social-set a:hover {
+	background: var(--accent-color);
 }
