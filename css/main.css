@@ -12,6 +12,11 @@ body {
 	font-family: "Catamaran", sans-serif;
 	background-color: var(--primary-white-color);
 	color: var(--primary-text-color);
+	font-weight: 400;
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 1.52;
+	letter-spacing: 0.03em;
 }
 button {
 	cursor: pointer;
@@ -28,7 +33,7 @@ button {
 /* ======================header==================== */
 .nav-list,
 .btn-box,
-.header {
+.header .container {
 	display: flex;
 	align-items: center;
 }
@@ -40,9 +45,7 @@ button {
 .nav-list .nav-item {
 	padding: 64px 14px 8px;
 
-	font-style: normal;
 	font-weight: 500;
-	font-size: 25px;
 	line-height: 1.32;
 }
 .nav-list .nav-item:not(:last-child) {
@@ -93,31 +96,20 @@ button {
 
 /* ---------------------------------- Hero ---------------------------------- */
 
-.section.hero {
+.hero {
 	padding: 32px 0 68px;
 }
-.hero-box {
-	display: flex;
-}
 
-.section-title.top-title {
-	width: 576px;
-	height: 300px;
+.hero .section-title {
 	margin-bottom: 29px;
-
-	font-weight: 700;
-	font-size: 75px;
-	line-height: 1.333;
 }
 
-.section-title span,
-.headline span {
+.section-title span {
 	color: var(--title-color);
 }
 
-.section-title.headline,
-.headline-galleri {
-	font-weight: bold;
+.section-title {
+	font-weight: 700;
 	font-size: 70px;
 	line-height: 1.506;
 	letter-spacing: 0.03em;
@@ -138,24 +130,23 @@ button {
 /* -------------------------------- Hero and -------------------------------- */
 
 /* --------------------------------- history -------------------------------- */
+.history-box .section-title {
+	margin-bottom: 80px;
+}
+
 .history-box {
 	background: url(../img/section/bg-top-left.svg) left top,
 		url(../img/section/bg-top-right.svg) right top,
 		url(../img/section/histori-img.svg) left center;
 
 	background-repeat: no-repeat;
-	background-position-x: -1%, 100%, 70px;
-	background-position-y: -10%, -10%, 50%;
+	background-position: -1% 0%, 100% 0%, 10% 80%;
 
-	padding: 288px 195px 334px 1199px;
+	padding: 288px 195px 216px 1199px;
 }
 /* --------------------------------- history  and-------------------------------- */
 
-/* --------------------------------- Услуги --------------------------------- */
-
-.section.services {
-	padding: 68px 0 136px;
-}
+/* --------------------------------- Provid --------------------------------- */
 .section-title.headline {
 	width: 389px;
 	height: 164px;
@@ -219,7 +210,8 @@ button {
 	transition: all 250ms ease-out;
 }
 
-.bg-services {
+.services .container {
+	text-align: center;
 	background: url(../img/section/bg-batton-left.svg) left,
 		url(../img/section/bg-batton-right.svg) right;
 
